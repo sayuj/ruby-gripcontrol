@@ -10,17 +10,20 @@
 # to the GRIP proxy in the body. The GRIP proxy then parses the message
 # and deserialized the JSON into an HTTP response that is passed back 
 # to the client.
-class Response
-  attr_accessor :code
-  attr_accessor :reason
-  attr_accessor :headers
-  attr_accessor :body
 
-  # Initialize with an HTTP response code, reason, headers, and body.
-  def initialize(code=nil, reason=nil, headers=nil, body=nil)
-    @code = code
-    @reason = reason
-    @headers = headers
-    @body = body
+module GripControl
+  class Response
+    attr_accessor :code
+    attr_accessor :reason
+    attr_accessor :headers
+    attr_accessor :body
+
+    # Initialize with an HTTP response code, reason, headers, and body.
+    def initialize(code=nil, reason=nil, headers=nil, body=nil)
+      @code = code
+      @reason = reason
+      @headers = headers
+      @body = body
+    end
   end
 end

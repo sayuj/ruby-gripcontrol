@@ -1,4 +1,4 @@
-require 'websocketmessageformat'
+require 'web_socket_message_format'
 require 'base64'
 require 'minitest/autorun'
 

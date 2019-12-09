@@ -1,6 +1,6 @@
-require 'grippubcontrol'
-require 'httpresponseformat'
-require 'httpstreamformat'
+require 'grip_pub_control'
+require 'http_response_format'
+require 'https_tream_format'
 require 'base64'
 require 'minitest/autorun'
 

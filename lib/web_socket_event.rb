@@ -8,13 +8,15 @@
 # The WebSocketEvent class represents WebSocket event information that is
 # used with the GRIP WebSocket-over-HTTP protocol. It includes information
 # about the type of event as well as an optional content field.
-class WebSocketEvent
-  attr_accessor :type
-  attr_accessor :content
+module GripControl
+  class WebSocketEvent
+    attr_accessor :type
+    attr_accessor :content
 
-  # Initialize with a specified event type and optional content information.
-  def initialize(type, content=nil)
-    @type = type
-    @content = content
+    # Initialize with a specified event type and optional content information.
+    def initialize(type, content=nil)
+      @type = type
+      @content = content
+    end
   end
 end

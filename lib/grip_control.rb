@@ -10,11 +10,11 @@ require 'jwt'
 require 'uri'
 require 'cgi'
 require_relative 'channel.rb'
-require_relative 'httpresponseformat.rb'
-require_relative 'httpstreamformat.rb'
-require_relative 'websocketmessageformat.rb'
-require_relative 'websocketevent.rb'
-require_relative 'grippubcontrol.rb'
+require_relative 'http_response_format.rb'
+require_relative 'https_tream_format.rb'
+require_relative 'web_socket_message_format.rb'
+require_relative 'web_socket_event.rb'
+require_relative 'grip_pub_control.rb'
 require_relative 'response.rb'
 
 # The GripControl class provides functionality that is used in conjunction
@@ -24,8 +24,8 @@ require_relative 'response.rb'
 # proxies, creating GRIP channel headers, and also WebSocket-over-HTTP
 # features such as encoding/decoding web socket events and generating
 # control messages.
-class GripControl
 
+module GripControl
   # Create GRIP hold instructions for the specified mode, channels, response
   # and optional timeout value. The channel parameter can be specified as
   # either a string representing the channel name, a Channel instance or an
@@ -189,7 +189,7 @@ class GripControl
     out = ''
     events.each do |event|
       if !event.content.nil?
-        out += "%s %x\r\n%s\r\n" % [event.type, event.content.length, 
+        out += "%s %x\r\n%s\r\n" % [event.type, event.content.length,
             event.content]
       else
         out += "%s\r\n" % [event.type]
@@ -266,7 +266,7 @@ class GripControl
       if !response.body.nil?
         if response.body.clone.force_encoding("UTF-8").valid_encoding?
           iresponse['body'] = response.body
-        else  
+        else
           iresponse['body-bin'] = Base64.encode64(response.body)
         end
       end

@@ -1,4 +1,4 @@
-require 'gripcontrol'
+require 'grip_control'
 require 'base64'
 require 'minitest/autorun'
 require 'json'

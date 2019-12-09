@@ -6,9 +6,14 @@ Gem::Specification.new do |s|
   s.description = 'A Ruby convenience library for using the GRIP protocol'
   s.authors     = ['Konstantin Bokarius']
   s.email       = 'bokarius@comcast.net'
-  s.files       = ['lib/gripcontrol.rb', 'lib/websocketmessageformat.rb',
-      'lib/websocketevent.rb', 'lib/httpstreamformat.rb', 'lib/channel.rb',
-      'lib/httpresponseformat.rb', 'lib/grippubcontrol.rb', 'lib/response.rb']
+  s.files       = ['lib/grip_control.rb',
+                   'lib/web_socket_message_format.rb',
+                   'lib/web_socket_event.rb',
+                   'lib/https_tream_format.rb',
+                   'lib/channel.rb',
+                   'lib/http_response_format.rb',
+                   'lib/grip_pub_control.rb',
+                   'lib/response.rb']
   s.homepage    = 'https://github.com/fanout/ruby-gripcontrol'
   s.license     = 'MIT'
   s.required_ruby_version = '>= 1.9.0'

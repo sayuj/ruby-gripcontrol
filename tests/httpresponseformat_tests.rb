@@ -1,4 +1,4 @@
-require 'httpresponseformat'
+require 'http_response_format'
 require 'base64'
 require 'minitest/autorun'
 

@@ -1,4 +1,4 @@
-require 'websocketevent'
+require 'web_socket_event'
 require 'minitest/autorun'
 
 class TestWebSocketEvent < Minitest::Test

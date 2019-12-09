@@ -1,4 +1,4 @@
-require 'httpstreamformat'
+require 'https_tream_format'
 require 'base64'
 require 'minitest/autorun'
 
